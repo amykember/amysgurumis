@@ -1,0 +1,25 @@
+.banner-image {
+    float: left;
+    width: 56px;
+    height: 56px;
+    margin-right: 10px;
+}
+
+.images {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.figure {
+    display: inline-block;
+    margin-bottom: 0;
+    img {
+        margin: 0 10px;
+        max-height: 500px;
+    }
+    figcaption {
+        color: $grey-color;
+        text-align: center;
+        margin-top: 1em;
+    }
+}

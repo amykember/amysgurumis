@@ -1,0 +1,6 @@
+<figure class="figure">
+    <a href="{{ include.link | default: include.src }}"><img src="{{ include.src }}" alt="{{ include.desc }}" width="{{ include.width }}" height="{{ include.height }}"></a>
+    {% if include.desc %}
+    <figcaption>{{ include.desc }}</figcaption>
+    {% endif %}
+</figure>
