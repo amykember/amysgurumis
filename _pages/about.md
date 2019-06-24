@@ -2,7 +2,7 @@
 layout: page
 title: About
 ---
-![Photo of me](/assets/me.jpg){: width="200" height="300" style="float: right; margin: 0 0 0 20px;"}
+![Photo of me](/assets/IMG_1446 copy.jpg){: height="350" style="float: right; margin: 0 0 0 20px;"}
 
 Hello! My name is Amy. I'm a technical writer living in Ottawa, Canada. In my spare time, I love to crochet and design amigurumis.
 
@@ -19,7 +19,7 @@ I opened my Etsy shop in 2010 and listed a mini doll pattern that's now availabl
 
 {% include image.html src="/assets/etsy_shop.jpg" desc="Etsy shop in 2014" %}
 
-I got plenty of practice crocheting custom orders for friends and family. These characters ranged from Angry Birds to Harry Potter, Doctor Who, and Paw Patrol. But my favourite things to crochet have always been rabbits and dolls. The best of my early designs was a little dress-up bunny with striped legs, and I've remade this pattern many times over the years.
+I got plenty of practice crocheting custom orders for friends and family. These characters ranged from Angry Birds to Harry Potter, Doctor Who, and Paw Patrol. But my favourite things to crochet have always been rabbits and dolls. The best of my early designs was a little dress-up bunny with striped legs, and I've remade this pattern many times over the years. I've come a long way since Peter!
 
 <div class="images">
 {% include multi-image.html src="/assets/dsc_0031.jpg" desc="The original little bunny" %}

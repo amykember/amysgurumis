@@ -3,7 +3,7 @@ layout: post
 title: Call the crocheted Chummy
 date: 2013-07-21 01:03:48.000000000 -04:00
 ---
-My obsession with Call the Midwife has entered the ultimate phase: the amigurumifiying of one of my favourite characters…Chummy! She’s just tickety-boo and marvelous, weighs about the size of a turkey 🦃, and I refer to her as “little bean”.
+My obsession with Call the Midwife has entered the ultimate phase: the amigurumifiying of one of my favourite characters…Chummy! She’s just tickety-boo and marvelous, weighs about the same as a turkey 🦃, and I refer to her as “little bean”.
 
 {% include image.html src="/assets/dsc_01642.jpg" desc="Crocheted Chummy doll" %}
 
