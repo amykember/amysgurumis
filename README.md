@@ -2,6 +2,14 @@
 
 This is my Jekyll blog. Hoo-rah.
 
+## How it's built
+
+We use the static site generator [Jekyll](https://jekyllrb.com/). This README is in the Jekyll repository.
+
+For hosting, we have a free account on Netlify. Sign in with GitHub.
+
+For the domain name, we pay per year on Namesilo.
+
 ## How to run the blog locally
 
 ```
@@ -10,7 +18,18 @@ bundle exec jekyll serve
 
 ## How to publish a new post
 
-TODO
+First, build:
+
+```
+bundle exec jekyll build
+```
+
+Then commit and push. Either using the GitHub Desktop app, or on the command line:
+
+```
+git commit -am "Your message here about what you did"
+git push
+```
 
 ## How we migrated from Wordpress
 
