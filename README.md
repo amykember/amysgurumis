@@ -61,3 +61,35 @@ ruby -r rubygems -e 'require "jekyll-import";
       "assets_folder" => "assets"
     })'
 ```
+
+## Ruby issue on 2020/01/04
+
+When running `bundle exec jekyll build`, got this:
+
+```
+-bash: /Users/amy/.gem/ruby/2.3.0/bin/bundle: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: bad interpreter: No such file or directory
+```
+
+Caused by updating to Catalina and going from Ruby 2.3.0 to 2.6.0, I think.
+
+Fixed it by:
+
+```
+gem uninstall bundler jekyll
+mv ~/.gem/ruby/2.3.0 ~/.Trash
+sudo gem install bundler
+```
+
+And also changed `.bash_profile` to be independent of version:
+
+```
+# Update PATH for Ruby gems
+for path in $HOME/.gem/ruby/*/bin; do
+	PATH=$path:$PATH
+done
+```
+
+References:
+
+- https://github.com/fastlane/fastlane/issues/15460#issuecomment-539947237
+- https://stackoverflow.com/questions/31596273/install-gem-in-local-folder
