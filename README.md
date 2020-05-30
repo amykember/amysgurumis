@@ -72,7 +72,7 @@ When running `bundle exec jekyll build`, got this:
 
 Caused by updating to Catalina and going from Ruby 2.3.0 to 2.6.0, I think.
 
-Fixed it by:
+First, did as suggested [here](https://github.com/fastlane/fastlane/issues/15460#issuecomment-539947237):
 
 ```
 gem uninstall bundler jekyll
@@ -89,7 +89,18 @@ for path in $HOME/.gem/ruby/*/bin; do
 done
 ```
 
-References:
+But installing `jekyll` or doing `bundle install` failed with this weird error:
 
-- https://github.com/fastlane/fastlane/issues/15460#issuecomment-539947237
-- https://stackoverflow.com/questions/31596273/install-gem-in-local-folder
+```
+Installing eventmachine 1.2.7 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: /Users/amy/.gem/ruby/2.3.0/ruby/2.6.0/gems/eventmachine-1.2.7/ext
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r
+./siteconf20200104-13097-1ammk2z.rb extconf.rb
+mkmf.rb can't find header files for ruby at
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/include/ruby.h
+```
+
+Found the same thing [here](https://github.com/castwide/vscode-solargraph/issues/78)
