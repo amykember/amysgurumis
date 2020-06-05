@@ -104,3 +104,24 @@ mkmf.rb can't find header files for ruby at
 ```
 
 Found the same thing [here](https://github.com/castwide/vscode-solargraph/issues/78)
+
+## Blurring the photos 2020/06/05
+
+```
+brew install imagemagick
+cd assets
+convert ak_chubbybaby1.jpg \( -clone 0 -fill white -colorize 100 -fill black -draw "polygon 755,138 755,735 1158,735 1158,114 955,114 955,138" -alpha off -blur 0x2 -write mpr:mask +delete \) -mask mpr:mask -blur 0x2 +mask ak_chubbybaby1_blur.jpg
+```
+
+### Coordinates
+
+- chubbybaby1: "755,138 755,735 1158,735 1158,114 955,114 955,138"
+- horse1: "755,138 755,730 920,730 975,465 1160,465 1165,112 950,112 950,138"
+- jumbodoll: "755,253 755,725 1160,725 1160,230 950,230 950,253"
+- lion: "755,253 755,725 1160,725 1160,230 950,230 950,253"
+- littlebunny: "755,138 755,735 1158,735 1158,114 955,114 955,138"
+- littledoll1: "755,249 755,730 955,730 1014,465 1160,465 1160,225 957,225 957,249"
+- mouse: "755,253 755,725 957,725 957,433 1160,433 1160,226 958,226 958,253"
+- prairiebunny: "755,253 755,725 948,725 948,380 1160,380 1160,226 958,226 958,253"
+- teddy: "755,138 755,562 991,562 991,547 1160,547 1160,111 956,111 956,138"
+- turtle: "755,255 755,470 798,470 842,459 960,469 1013,472 1056,459 1160,469 1160,230 958,230 958,255"
