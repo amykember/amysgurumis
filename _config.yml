@@ -17,7 +17,8 @@ title: Amy’s Gurumis
 author: Amy Kember
 email: amysgurumis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hi, I’m Amy 👋 I’m a technical writer who loves crocheting. Amy’s Gurumis is where I share my recent projects, crochet tips and tricks, and new pattern designs.
+  Hi, I’m Amy 👋  I’m a technical writer who loves crocheting. Amy’s Gurumis is where I share my recent projects, crochet tips and tricks, and new pattern designs.
+# Note: the two spaces after the wave emoji are no-break spaces
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
