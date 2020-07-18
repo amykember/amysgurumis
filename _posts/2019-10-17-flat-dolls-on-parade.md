@@ -2,6 +2,7 @@
 layout: post
 title: 'Flat dolls on parade'
 date: 2019-12-25 01:15:25.000000 -0400
+published: false
 ---
 Just a quick hello before the end of 2019 with resolutions for more content in 2020. On December 7th I was in a craft show for the first time in years. My stall was a bit sparse; I always think I'll have more time to prep than I really do.
 

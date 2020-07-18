@@ -2,6 +2,7 @@
 layout: post
 title: 'My new podcast'
 date: 2019-06-27 01:15:25.000000 -0400
+published: false
 ---
 Check out the [first episode of the Amy's Gurumis podcast][podcast]! It's easier to show than tell, so this is how I plan to share my projects going forward. Subscribe to my YouTube channel for future episodes. 
 
