@@ -23,9 +23,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 instagram_username: amysgurumis
-tumblr_username: amysgurumis
-pinterest_username: amysgurumis
-youtube_username: amysgurumis
+ravelry_username: amys-gurumis
 
 permalink: /:year/:month/:day/:title
 
