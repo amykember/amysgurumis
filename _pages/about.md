@@ -2,7 +2,7 @@
 layout: page
 title: About
 ---
-![Photo of me](/assets/headshot.jpg){: height="375" style="float: right; margin: 0 20px 20px 20px;"}
+![Photo of me](/assets/headshot.jpg){: height="345" style="float: right; margin: 0 0 20px 20px;"}
 
 Hello! My name is Amy. I'm a technical writer living in Ottawa, Canada. In my spare time, I love to crochet and design amigurumis.
 
