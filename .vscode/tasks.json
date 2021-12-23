@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Open Website",
+            "label": "Preview Website",
             "type": "shell",
             "command": "zola serve --open",
             "group": {
@@ -17,6 +17,37 @@
                 "showReuseMessage": true,
                 "clear": true
             }
+        },
+        {
+            "label": "Preview Website (With Drafts)",
+            "type": "shell",
+            "command": "zola serve --open --drafts",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "Publish!!",
+            "type": "shell",
+            "command": "./fix-stuff.sh && zola build && git commit -am \"${input:commitmsg}\" && git push",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
         },
         {
             "label": "Fix Stuff",
@@ -47,6 +78,14 @@
                 "reveal": "silent",
                 "close": true
             }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "commitmsg",
+            "description": "Commit message",
+            "default": "Publish changes",
+            "type": "promptString"
         }
     ]
 }

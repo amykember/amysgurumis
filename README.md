@@ -18,7 +18,7 @@ We pay NameSilo for the domain name: https://www.namesilo.com/account_domains.ph
 
 In VS Code, press Cmd+Shift+B.
 
-Or, go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "Open Website".
+Or, go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "Preview Website".
 
 Or, open a terminal (Ctrl+Backtick), run `zola serve`, and visit http://127.0.0.1:1111.
 
@@ -26,29 +26,23 @@ Or, open a terminal (Ctrl+Backtick), run `zola serve`, and visit http://127.0.0.
 
 1. If you have a draft that's ready to be published, remove the `draft = true` line.
 
-2. If you're publishing a new post, time might have passed since you created it. Rename the file so that it starts with the current date.
+2. Make sure dates are accurate. You might want to rename a blog post file to use the current date.
 
-3. Go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "Fix Stuff". This will automatically add or fix the `path = "..."` lines below the titles of each page/post.
+3. Go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "Publish!!".
 
-4. Commit your changes (Cmd+Shift+P, start typing "Git: Commit All").
-
-5. Push to GitHub (Cmd+Shift+P, start typing "Git: Push").
-
-### Add a blog post
+### Create a new blog post
 
 Go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "New Blog Post".
 
-To change the slug, rename the file (keeping the date in front) and then run "Fix Stuff" (see "Publish changes" step 3).
+To change the slug, rename the file (keeping the date in front) and then go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "Fix Stuff".
 
-### Add a page
+### Create a new page
 
 Go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "New Page".
 
-To change the slug, rename the file (keeping the number in front) and then run "Fix Stuff" (see "Publish changes" step 3).
+To change the slug, rename the file and then go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "Fix Stuff". To reorder pages, rename them so that the numbers are in the desired order, and run "Fix Stuff".
 
-To reorder pages, change the numbers at the front of their filenames and run "Fix Stuff".
-
-### Remove a post/page
+### Remove a post or page
 
 You can delete the file, or just add `draft = true` under `title = "..."` so that it won't be published.
 
