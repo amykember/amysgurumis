@@ -22,9 +22,7 @@ while read -r f; do
     slug=${base:2:1000}
     slug=${slug%.md}
     set_path "/$slug" "$f"
-    set -x
     set_weight "$weight" "$f"
-    set +x
 done < <(find content/pages -type f -name '[0-9]-*.md')
 
 while read -r f; do
