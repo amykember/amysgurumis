@@ -105,6 +105,12 @@ mkmf.rb can't find header files for ruby at
 
 Found the same thing [here](https://github.com/castwide/vscode-solargraph/issues/78)
 
+## Ruby issue on 2021/12/21
+
+When running `bundle exec jekyll serve`, got errors, so ran `bundle install`, but got more errors about eventmachine not being able to build. Upgraded Homebrew only to realize we were using the system Ruby. Seems something to do with Xcode command-line tools preventing a Gem dependency with native extensions from installing.
+
+So installed Ruby from Homebrew, deleted Gemfile.lock, simplified Gemfile, and ran `bundle install` (using the Homebrew Ruby's `bundle`).
+
 ## Blurring the photos 2020/06/05
 
 ```
