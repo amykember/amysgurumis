@@ -4,7 +4,8 @@
         {
             "label": "Preview Website",
             "type": "shell",
-            "command": "zola serve --open",
+            // Build after to avoid deleting public/.
+            "command": "./fix-stuff.sh && zola serve --open; zola build",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -21,7 +22,8 @@
         {
             "label": "Preview Website (With Drafts)",
             "type": "shell",
-            "command": "zola serve --open --drafts",
+            // Build after to avoid deleting public/.
+            "command": "./fix-stuff.sh && zola serve --open --drafts; zola build",
             "group": "build",
             "presentation": {
                 "echo": true,

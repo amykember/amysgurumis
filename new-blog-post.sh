@@ -4,6 +4,8 @@ set -eufo pipefail
 
 cd "$(dirname "$0")"
 
+./fix-stuff.sh
+
 slug="rename-me-please"
 file="content/posts/$(date +"%Y-%m-%d")-$slug.md"
 

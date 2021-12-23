@@ -4,6 +4,8 @@ set -eufo pipefail
 
 cd "$(dirname "$0")"
 
+./fix-stuff.sh
+
 weight=$(ls content/pages | grep '^[0-9]-' | sort | tail -n1 | cut -c 1)
 ((weight++))
 slug="rename-me-please"
