@@ -1,133 +1,63 @@
 # Amy's Gurumis
 
-This is my Jekyll blog. Hoo-rah.
+This is my Zola blog. Hoo-rah.
 
-## How it's built
+## What it uses
 
-We use the static site generator [Jekyll](https://jekyllrb.com/). This README is in the Jekyll repository.
+The repository is on GitHub: https://github.com/amykember/amysgurumis.
 
-For hosting, we have a free account on Netlify. Sign in with GitHub.
+We use the Zola static site generator: https://www.getzola.org.
 
-For the domain name, we pay per year on Namesilo.
+The website is hosted for free on Netlify: https://app.netlify.com/sites/amysgurumis.
 
-## How to run the blog locally
+We pay NameSilo for the domain name: https://www.namesilo.com/account_domains.php.
 
-```
-bundle exec jekyll serve
-```
+## How to do stuff
 
-## How to publish a new post
+### Preview the website
 
-First, build:
+In VS Code, press Cmd+Shift+B.
 
-```
-bundle exec jekyll build
-```
+Or, go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "Open Website".
 
-Then commit and push. Either using the GitHub Desktop app, or on the command line:
+Or, open a terminal (Ctrl+Backtick), run `zola serve`, and visit http://127.0.0.1:1111.
 
-```
-git commit -am "Your message here about what you did"
-git push
-```
+### Publish changes
 
-## How we migrated from Wordpress
+1. If you have a draft that's ready to be published, remove the `draft = true` line.
 
-Install user-local gems and update PATH:
+2. If you're publishing a new post, time might have passed since you created it. Rename the file so that it starts with the current date.
 
-```
-gem install --user-install jekyll bundler jekyll-import hpricot open_uri_redirections
-echo 'export PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH"' >> ~/.bash_profile
-```
+3. Go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "Fix Stuff". This will automatically add or fix the `path = "..."` lines below the titles of each page/post.
 
-Create the blog:
+4. Commit your changes (Cmd+Shift+P, start typing "Git: Commit All").
 
-```
-cd ~/Dropbox
-jekyll new amysgurumis
-cd amysgurumis
-bundle install --path ~/.gem/ruby/2.3.0
-```
+5. Push to GitHub (Cmd+Shift+P, start typing "Git: Push").
 
-Export the XML file from https://amysgurumis.wordpress.com/wp-admin/export.php.
+### Add a blog post
 
-Import the XML to Jekyll:
+Go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "New Blog Post".
 
-```
-ruby -r rubygems -e 'require "jekyll-import";
-    JekyllImport::Importers::WordpressDotCom.run({
-      "source" => "wordpress.xml",
-      "no_fetch_images" => false,
-      "assets_folder" => "assets"
-    })'
-```
+To change the slug, rename the file (keeping the date in front) and then run "Fix Stuff" (see "Publish changes" step 3).
 
-## Ruby issue on 2020/01/04
+### Add a page
 
-When running `bundle exec jekyll build`, got this:
+Go to _Explorer_ (Cmd+Shift+E), find _Task Runner_ at the bottom, and click "New Page".
 
-```
--bash: /Users/amy/.gem/ruby/2.3.0/bin/bundle: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: bad interpreter: No such file or directory
-```
+To change the slug, rename the file (keeping the number in front) and then run "Fix Stuff" (see "Publish changes" step 3).
 
-Caused by updating to Catalina and going from Ruby 2.3.0 to 2.6.0, I think.
+To reorder pages, change the numbers at the front of their filenames and run "Fix Stuff".
 
-First, did as suggested [here](https://github.com/fastlane/fastlane/issues/15460#issuecomment-539947237):
+### Remove a post/page
 
-```
-gem uninstall bundler jekyll
-mv ~/.gem/ruby/2.3.0 ~/.Trash
-sudo gem install bundler
-```
+You can delete the file, or just add `draft = true` under `title = "..."` so that it won't be published.
 
-And also changed `.bash_profile` to be independent of version:
+## History
 
-```
-# Update PATH for Ruby gems
-for path in $HOME/.gem/ruby/*/bin; do
-	PATH=$path:$PATH
-done
-```
+- Sep 2010: WordPress blog at https://amysgurumis.wordpress.com
+- Jun 2019: Converted to Jekyll, moved to https://amysgurumis.com
+- Dec 2021: Converted to Zola, added the Pattern Maker
 
-But installing `jekyll` or doing `bundle install` failed with this weird error:
+## License
 
-```
-Installing eventmachine 1.2.7 with native extensions
-Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
-
-    current directory: /Users/amy/.gem/ruby/2.3.0/ruby/2.6.0/gems/eventmachine-1.2.7/ext
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r
-./siteconf20200104-13097-1ammk2z.rb extconf.rb
-mkmf.rb can't find header files for ruby at
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/include/ruby.h
-```
-
-Found the same thing [here](https://github.com/castwide/vscode-solargraph/issues/78)
-
-## Ruby issue on 2021/12/21
-
-When running `bundle exec jekyll serve`, got errors, so ran `bundle install`, but got more errors about eventmachine not being able to build. Upgraded Homebrew only to realize we were using the system Ruby. Seems something to do with Xcode command-line tools preventing a Gem dependency with native extensions from installing.
-
-So installed Ruby from Homebrew, deleted Gemfile.lock, simplified Gemfile, and ran `bundle install` (using the Homebrew Ruby's `bundle`).
-
-## Blurring the photos 2020/06/05
-
-```
-brew install imagemagick
-cd assets
-convert ak_chubbybaby1.jpg \( -clone 0 -fill white -colorize 100 -fill black -draw "polygon 755,138 755,735 1158,735 1158,114 955,114 955,138" -alpha off -blur 0x2 -write mpr:mask +delete \) -mask mpr:mask -blur 0x2 +mask ak_chubbybaby1_blur.jpg
-```
-
-### Coordinates
-
-- chubbybaby1: "755,138 755,735 1158,735 1158,114 955,114 955,138"
-- horse1: "755,138 755,730 920,730 975,465 1160,465 1165,112 950,112 950,138"
-- jumbodoll: "755,253 755,725 1160,725 1160,230 950,230 950,253"
-- lion: "755,253 755,725 1160,725 1160,230 950,230 950,253"
-- littlebunny: "755,138 755,735 1158,735 1158,114 955,114 955,138"
-- littledoll1: "755,249 755,730 955,730 1014,465 1160,465 1160,225 957,225 957,249"
-- mouse: "755,253 755,725 957,725 957,433 1160,433 1160,226 958,226 958,253"
-- prairiebunny: "755,253 755,725 948,725 948,380 1160,380 1160,226 958,226 958,253"
-- teddy: "755,138 755,562 991,562 991,547 1160,547 1160,111 956,111 956,138"
-- turtle: "755,255 755,470 798,470 842,459 960,469 1013,472 1056,459 1160,469 1160,230 958,230 958,255"
+The Minima theme files were copied from https://github.com/onur/zola-minima/commit/c69b995dcdaa236eae7ab207e5fef47a7628ea78, which is © 2018 Onur Aslan <onur@onur.im> and MIT-licensed.

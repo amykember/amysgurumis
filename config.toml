@@ -1,0 +1,43 @@
+# The URL the site will be built for
+base_url = "https://amysgurumis.com"
+
+# Title of the website, shown in the header
+title = "Amy’s Gurumis"
+
+# Description of the website, show in the footer
+description = """
+Hi, I’m Amy 👋  I’m a technical writer who loves crocheting. Amy’s Gurumis is where I share my recent projects, crochet tips and tricks, and new pattern designs.
+"""
+
+# Generate an Atom feed
+generate_feed = true
+
+# For compatibility with old Jekyll feed, use feed.xml, not atom.xml.
+# This requires a ./templates/feed.xml file, in which I copied the built-in
+# atom.xml template (you can't inherit from built-in templates).
+feed_filename = "feed.xml"
+
+# Use curly quotes, convert ... to ellipsis, etc.
+smart_punctuation = true
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[extra]
+
+lang = "en"
+author = "Amy Kember"
+email = "amysgurumis@gmail.com"
+etsy_username = "AmysGurumis"
+ravelry_username = "amys-gurumis"
+
+# See https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html
+date_format = "%b %d, %Y"

@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Open Website",
+            "type": "shell",
+            "command": "zola serve --open",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "Fix Stuff",
+            "type": "shell",
+            "command": "./fix-stuff.sh",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "close": true
+            }
+        },
+        {
+            "label": "New Blog Post",
+            "type": "shell",
+            "command": "./new-blog-post.sh",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "close": true
+            }
+        },
+        {
+            "label": "New Page",
+            "type": "shell",
+            "command": "./new-page.sh",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "close": true
+            }
+        }
+    ]
+}

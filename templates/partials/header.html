@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="wrapper">
+    <img class="banner-image" src="{{ get_url(path="assets/bunny.png") }}">
+    <a class="site-title" rel="author" href="{{ config.base_url | safe }}">{{ config.title }}</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger">
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          {{ load_data(path="templates/icons/hamburger.svg") | safe }}
+        </span>
+      </label>
+      <div class="trigger">
+        {%- set pages_section = get_section(path="pages/_index.md") -%}
+        {%- for page in pages_section.pages -%}
+        <a class="page-link" href="{{ page.permalink }}">{{ page.title }}</a>
+        {%- endfor -%}
+        <a class="page-link" target="_blank" rel="noopener" href="https://www.etsy.com/shop/{{ config.extra.etsy_username }}">Etsy Shop<!--
+        -->{{ load_data(path="templates/icons/external.svg") | safe }}
+    </a>
+      </div>
+    </nav>
+  </div>
+</header>

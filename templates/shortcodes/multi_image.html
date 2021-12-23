@@ -1,0 +1,9 @@
+<figure class="figure">
+  <a href="{{ link | default(value=src) }}"><img src="{{ src }}"
+    {%- if desc %} alt="{{ desc }}"{% endif -%}
+    {%- if width %} width="{{ width }}"{% endif -%}
+    {%- if height %} height="{{ height }}"{% endif -%}></a>
+  {%- if desc %}
+  <figcaption>{{ desc }}</figcaption>
+  {%- endif %}
+</figure>

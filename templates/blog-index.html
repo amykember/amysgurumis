@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="home">
+  {%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+  <h2 class="post-list-heading">Posts</h2>
+  <ul class="post-list">
+    {%- set posts_section = get_section(path="posts/_index.md") -%}
+    {%- for page in posts_section.pages %}
+    <li>
+      <span class="post-meta">{{ page.date | date(format=config.extra.date_format) }}</span>
+      <h3>
+        <a class="post-link" href="{{ page.permalink }}">
+          {{ page.title }}
+        </a>
+      </h3>
+      {{ page.summary | safe }}
+    </li>
+    {%- endfor %}
+  </ul>
+</div>
+{% endblock content %}
