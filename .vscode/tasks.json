@@ -36,10 +36,7 @@
             "label": "Publish!!",
             "type": "shell",
             "command": "./fix-stuff.sh && zola build && git add . && git commit -m \"${input:commitmsg}\" && git push",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": "build",
             "presentation": {
                 "echo": true,
                 "reveal": "always",
