@@ -30,7 +30,7 @@ I got plenty of practice crocheting custom orders for friends and family. These 
   {{ multi_image(src="/assets/dsc_00201.jpg", desc="An improved little bunny") }}
 </div>
 
-I love designing my own dolls, as well as ones inspired by my favourite book or television series. I've crocheted versions of [Chummy][], [Sister Bernadette][], [Shelagh][], and [Trixie] [] from BBC's Call the Midwife, and all three were featured in the January 2017 Let's Knit Magazine.
+I love designing my own dolls, as well as ones inspired by my favourite book or television series. I've crocheted versions of [Chummy][], [Sister Bernadette][], [Shelagh][], and [Trixie][] from BBC's Call the Midwife, and all three were featured in the January 2017 Let's Knit Magazine.
 
 <div class="images">
   {{ multi_image(src="/assets/dsc_0066.jpg", desc="Dress-up dolls") }}
@@ -45,5 +45,5 @@ If you have an amigurumi request or a favourite character you'd like to see croc
 [Chummy]: /2013/07/21/call-the-crocheted-chummy
 [Sister Bernadette]: /2013/07/31/what-is-crochetable-and-uncrochetable
 [Shelagh]: /2013/08/10/amigurumi-shelagh-leaves-the-sanatorium
-[Trixie]: /2015/01/28/trixie-on-tv
+[Trixie]: /2015/01/29/trixie-on-tv
 [contact]: /contact

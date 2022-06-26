@@ -18,7 +18,7 @@ Free! Click the images below to download the PDFs.
 
 {{ image(src="/assets/wardrobe.png", link="/assets/AmysGurumis-Wardrobe.pdf", desc="Little Bunny's Wardrobe") }}
 
-{{ image(src="/assets/chummy-doll.png", link="/assets/AmysGurumis-Chummy.pdf", desc="Chummy from <i>Call the Midwife</i>") }}
+{{ image(src="/assets/chummy-doll.png", link="/assets/AmysGurumis-Chummy.pdf", desc="Chummy from Call the Midwife") }}
 
 {{ image(src="/assets/shoes-doll.png", link="/assets/AmysGurumis-Doll-Shoes.pdf", desc="18-inch Doll Shoes") }}
 

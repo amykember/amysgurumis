@@ -53,7 +53,7 @@ This page helps you write basic amigurumi patterns. Enter the information for on
         <label for="region-uk"><img src="/assets/uk.svg" width="35";></label>
       </div>
       <div class="radio-buttons">
-        <p>Pattern format</p>
+        <p>Format</p>
         <input type="radio" id="format-basic" name="format"></input>
         <label for="format-basic">Basic</label>
         <input type="radio" id="format-detailed" name="format"></input>
