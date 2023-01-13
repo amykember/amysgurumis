@@ -10,7 +10,20 @@ styles = [ "pattern-maker.css" ]
 scripts = [ "pattern-maker.js" ]
 +++
 
-This page helps you write basic amigurumi patterns. Enter the information for one section (e.g. head, body, arms). Click **Submit** to generate instructions. Copy to your clipboard so you can easily paste this text into a document. Then click **Refresh**, repeat for each section, and your pattern is ready to go!
+This page helps you write basic amigurumi patterns. Enter the information requested in each field. 
+<ul>
+<li>Section: The part of the amigurumi (e.g., head, body, arms, legs).</li>
+<li>Number: The number of items to make (e.g., for the body enter 1, for arms enter 2).</li>
+<li>Colour: The colour of yarn to use for the section.</li>
+<li>Start with: The number of stitches to start with in the magic ring (e.g., 6).</li>
+<li>Increase to: The number of stitches between the increases in the final increase round.</li>
+<li>Plain rounds: The number of rounds to single crochet between increasing and decreasing.</li>
+<li>Decrease to: The number of stitches between the decreases in the final decrease round.</li>
+<li>Crochet terms: US or UK crochet terminology.</li>
+<li>Format: Basic is a more abbreviated format; Detailed is a more verbose format.</li>
+</ul>
+
+Click _Submit_ to generate instructions. Copy to your clipboard so you can easily paste this text into a document. Then click _Refresh_, repeat for each section, and your pattern is ready to go! Note that once you click _Submit_, making changes to the field and clicking _Submit_ again will not accurately update the pattern. You'll need to click _Refresh_ and start again to make changes.
 
 <div class="pattern">
   <div class="pattern-input">
