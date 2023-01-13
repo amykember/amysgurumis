@@ -20,10 +20,10 @@ This page helps you write basic amigurumi patterns. Enter the information reques
 <li>Plain rounds: The number of rounds to single crochet between increasing and decreasing.</li>
 <li>Decrease to: The number of stitches between the decreases in the final decrease round.</li>
 <li>Crochet terms: US or UK crochet terminology.</li>
-<li>Format: Basic is a more abbreviated format; Detailed is a more verbose format.</li>
+<li>Format: Basic is condensed for readability; Detailed spells out each step for clarity</li>
 </ul>
 
-Click _Submit_ to generate instructions. Copy to your clipboard so you can easily paste this text into a document. Then click _Refresh_, repeat for each section, and your pattern is ready to go! Note that once you click _Submit_, making changes to the field and clicking _Submit_ again will not accurately update the pattern. You'll need to click _Refresh_ and start again to make changes.
+Click _Submit_ to generate instructions. Copy to your clipboard so you can easily paste this text into a document. Then click _Refresh_, repeat for each section, and your pattern is ready to go! Note that once you click _Submit_, making changes to the fields and clicking _Submit_ again won't accurately update the pattern. You'll need to click _Refresh_ and start again to make changes.
 
 <div class="pattern">
   <div class="pattern-input">
